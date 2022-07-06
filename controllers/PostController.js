@@ -6,7 +6,7 @@ const createPost = async (req, res) => {
         return res.json(newPost);
     } catch (e) {
         console.log(e);
-        return res.status(500).json({error: 'AQUIIIIIIIII', e});
+        return res.status(500).json({error: e});
     }
 };
 

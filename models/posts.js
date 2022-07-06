@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(5000),
       allowNull: false
     },
-    postTittle: {
+    postTitle: {
       type: DataTypes.STRING,
       allowNull: false 
     },

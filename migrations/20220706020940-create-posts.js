@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      postTittle: {
+      postTitle: {
         type: Sequelize.STRING,
         allowNull: false,
       },
