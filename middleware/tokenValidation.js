@@ -16,6 +16,7 @@ const tokenValidation = async (req, res, next) => {
             username: tokenVerify.username,
             userId: tokenVerify.id,
         };
+        next();
     } catch(e) {
         console.log(e);
         return res.json({error: e});

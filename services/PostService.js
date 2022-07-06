@@ -1,9 +1,12 @@
 const { Posts } = require('../models');
 
-const createPost = async (req) => {
-    const { username, userId } = req.user;
-    const { postText, postTittle } = req.body;
-    const post = await Posts.create({where: { username, userId, postText, postTittle }});
+const createPost = async (body, user) => {
+    const { postText, postTittle } = body;
+    const { username, userId } = user;
+    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAi')
+    console.log('postText', postText, postTittle);
+
+    const post = await Posts.create({ postTittle, postText, username, userId });
     return post;
 };
 

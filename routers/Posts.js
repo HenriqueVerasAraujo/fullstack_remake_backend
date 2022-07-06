@@ -4,6 +4,6 @@ const PostController = require('../controllers/PostController');
 const tokenValidation = require('../middleware/tokenValidation');
 
 // Create new post:
-router.post('/creatpost', tokenValidation, PostController.createPost);
+router.post('/createpost',tokenValidation, PostController.createPost);
 
 module.exports = router;
