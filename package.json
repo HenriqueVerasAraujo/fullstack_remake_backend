@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/HenriqueVerasAraujo/fullstack_remake_backend/issues"
   },
-  "homepage": "https://github.com/HenriqueVerasAraujo/fullstack_remake_backend#readme"
+  "homepage": "https://github.com/HenriqueVerasAraujo/fullstack_remake_backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.2",
+    "sequelize-cli": "^6.4.1"
+  }
 }
