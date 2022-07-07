@@ -7,7 +7,9 @@ const tokenValidation = require('../middleware/tokenValidation');
 router.post('/createpost',tokenValidation, PostController.createPost);
 
 // Get all Posts (home):
-
 router.get('/getall', PostController.getAll);
+
+// Get single Post (singlePostPage):
+router.get('/getsingle/:id', PostController.getSingle);
 
 module.exports = router;
