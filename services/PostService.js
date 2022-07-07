@@ -10,6 +10,12 @@ const createPost = async (body, user) => {
     return post;
 };
 
+const getAll = async () => {
+    const allPosts = await Posts.findAll();
+    return allPosts;
+}
+
 module.exports = {
     createPost,
+    getAll,
 }

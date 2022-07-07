@@ -10,6 +10,16 @@ const createPost = async (req, res) => {
     }
 };
 
+const getAll = async (req, res) => {
+    try {
+        const allPosts = await PostService.getAll();
+        return res.json(allPosts);
+    } catch (e) {
+
+    }
+}
+
 module.exports = {
     createPost,
-}
+    getAll,
+}  
