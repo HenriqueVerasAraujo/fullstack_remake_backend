@@ -21,6 +21,12 @@ const getAll = async (req, res) => {
     }
 };
 
+const deleteComment = async = (req, res) => {
+    const { id } = req.params;
+    await CommentService.deleteComment(id);
+    return res.json({ ok: true });
+}
+
 // const getSingle = async (req, res) => {
 //     const { id } = req.params;
 //     try {
@@ -38,5 +44,5 @@ const getAll = async (req, res) => {
 module.exports = {
     createComment,
     getAll,
-    // getSingle,
+    deleteComment
 };

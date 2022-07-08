@@ -9,6 +9,9 @@ router.post('/createcomment',tokenValidation, CommentController.createComment);
 // Get all Comments (singlePost):
 router.get('/getall/:id', CommentController.getAll);
 
+
+// Delete a single Comment: 
+router.delete('/delete/:id', CommentController.deleteComment);
 // // Get single Comment (singleCommentPage):
 // router.get('/getsingle/:id', CommentController.getSingle);
 

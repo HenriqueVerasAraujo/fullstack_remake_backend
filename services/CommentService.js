@@ -13,6 +13,9 @@ const getAll = async (postId) => {
     return allComments;
 };
 
+const deleteComment = async (commentId) => {
+    await Comments.destroy({ where: { id: Number(commentId) } });
+}
 // const getSingle = async (id) => {
 //     const singlePost = await Posts.findOne({where: { id }});
 //     if (!singlePost) {
@@ -24,5 +27,5 @@ const getAll = async (postId) => {
 module.exports = {
     createComment,
     getAll,
-    // getSingle
+    deleteComment
 }
