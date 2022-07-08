@@ -10,15 +10,16 @@ const createComment = async (req, res) => {
     }
 };
 
-// const getAll = async (_req, res) => {
-//     try {
-//         const allPosts = await PostService.getAll();
-//         return res.json(allPosts);
-//     } catch (e) {
-//         console.log(e);
-//         return res.status(500).json({error: e});
-//     }
-// }
+const getAll = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const allComments = await CommentService.getAll(id);
+        return res.json(allComments);
+    } catch (e) {
+        console.log(e);
+        return res.status(500).json({error: e});
+    }
+};
 
 // const getSingle = async (req, res) => {
 //     const { id } = req.params;
@@ -36,6 +37,6 @@ const createComment = async (req, res) => {
 
 module.exports = {
     createComment,
-    // getAll,
+    getAll,
     // getSingle,
 };

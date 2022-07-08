@@ -8,10 +8,10 @@ const createComment = async (body, user) => {
     return comment;
 };
 
-// const getAll = async () => {
-//     const allComments = await Posts.findAll();
-//     return allPosts;
-// };
+const getAll = async (postId) => {
+    const allComments = await Comments.findAll({ where: { postId: Number(postId) }});
+    return allComments;
+};
 
 // const getSingle = async (id) => {
 //     const singlePost = await Posts.findOne({where: { id }});
@@ -23,6 +23,6 @@ const createComment = async (body, user) => {
 
 module.exports = {
     createComment,
-    // getAll,
+    getAll,
     // getSingle
 }
