@@ -21,10 +21,15 @@ const getAll = async (req, res) => {
     }
 };
 
-const deleteComment = async = (req, res) => {
+const deleteComment = async (req, res) => {
     const { id } = req.params;
-    await CommentService.deleteComment(id);
-    return res.json({ ok: true });
+    try {
+        await CommentService.deleteComment(id);
+        return res.json({ ok: true });
+    } catch(e) {
+        console.log(e);
+        return res.status(500).json({ error: e });
+    };
 }
 
 // const getSingle = async (req, res) => {
