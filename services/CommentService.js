@@ -15,10 +15,10 @@ const getAll = async (postId) => {
 
 const deleteComment = async (commentId) => {
     await Comments.destroy({ where: { id: Number(commentId) } });
-}
+};
 
 module.exports = {
     createComment,
     getAll,
     deleteComment
-}
+};
