@@ -1,4 +1,4 @@
-const { Posts } = require('../models');
+const { Posts, Likes } = require('../models');
 
 const createPost = async (body, user) => {
     const { postText, postTitle } = body;
@@ -11,7 +11,7 @@ const createPost = async (body, user) => {
 };
 
 const getAll = async () => {
-    const allPosts = await Posts.findAll();
+    const allPosts = await Posts.findAll({ order: [ ['id', 'Desc']], include: [Likes] });
     return allPosts;
 };
 
@@ -25,10 +25,11 @@ const getSingle = async (id) => {
 
 const deletePost = async (id) => {
     await Posts.destroy({ where: { id } });
-}
+};
+
 module.exports = {
     createPost,
     getAll,
     getSingle,
     deletePost
-}
+};

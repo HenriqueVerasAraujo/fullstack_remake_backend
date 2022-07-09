@@ -31,4 +31,4 @@ const addLike = async (body, user) => {
 // }
 module.exports = {
     addLike,
-}
+};
