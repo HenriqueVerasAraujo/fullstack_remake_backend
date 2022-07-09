@@ -32,10 +32,22 @@ const getSingle = async (req, res) => {
         console.log(e);
         return res.status(500).json({error: e});
     }
-}
+};
+
+const deletePost = async (req, res) => {
+    const { id }  = req.params;
+    try {
+        await PostService.deletePost(id);
+        res.json({delete: 'true' });
+    } catch (e) {
+        console.log(e);
+        return res.status(500).json({error: e});
+    };
+};
 
 module.exports = {
     createPost,
     getAll,
     getSingle,
+    deletePost,
 };

@@ -32,20 +32,6 @@ const deleteComment = async (req, res) => {
     };
 }
 
-// const getSingle = async (req, res) => {
-//     const { id } = req.params;
-//     try {
-//         const singlePost = await PostService.getSingle(id);
-//         if(singlePost.error) {
-//             return res.json({ error: singlePost.error });
-//         }
-//         return res.json(singlePost);
-//     } catch (e) {
-//         console.log(e);
-//         return res.status(500).json({error: e});
-//     }
-// }
-
 module.exports = {
     createComment,
     getAll,

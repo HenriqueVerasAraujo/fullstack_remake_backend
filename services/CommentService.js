@@ -16,13 +16,6 @@ const getAll = async (postId) => {
 const deleteComment = async (commentId) => {
     await Comments.destroy({ where: { id: Number(commentId) } });
 }
-// const getSingle = async (id) => {
-//     const singlePost = await Posts.findOne({where: { id }});
-//     if (!singlePost) {
-//         return {error: 'Post not found.'};
-//     }
-//     return singlePost;
-// };
 
 module.exports = {
     createComment,

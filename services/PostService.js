@@ -23,8 +23,12 @@ const getSingle = async (id) => {
     return singlePost;
 };
 
+const deletePost = async (id) => {
+    await Posts.destroy({ where: { id } });
+}
 module.exports = {
     createPost,
     getAll,
-    getSingle
+    getSingle,
+    deletePost
 }

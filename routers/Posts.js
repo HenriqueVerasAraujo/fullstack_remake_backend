@@ -12,4 +12,7 @@ router.get('/getall', PostController.getAll);
 // Get single Post (singlePostPage):
 router.get('/getsingle/:id', PostController.getSingle);
 
+// Delete a single Post (home):
+router.delete('/delete/:id', PostController.deletePost);
+
 module.exports = router;
