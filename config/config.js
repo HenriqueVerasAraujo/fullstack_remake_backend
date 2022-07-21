@@ -20,6 +20,12 @@ module.exports = {
     password: process.env.MYSQL_PASSWORD,
     database: process.env.DB,
     host: process.env.HOSTNAME,
-    dialect: 'mysql',
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   },
 };
