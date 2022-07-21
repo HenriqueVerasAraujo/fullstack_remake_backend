@@ -10,6 +10,9 @@ const LikesRouter = require('./routers/Likes');
 
 app.use(cors());
 app.use(express.json());
+app.get('/', async (req, res) => {
+    return res.status(200).json({message: 'test'});
+})
 app.use('/users', UsersRouter);
 app.use('/posts', PostsRouter);
 app.use('/comments', CommentRouter);
