@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5
+    platform: linux
+    container_name: mysql_test
+    enviroment:
+      MYSQL_ROOT_PASSWORD: root
+      port:
+      - 3306:3306
